@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>客服员工手册 · Customer Service SOP</title>
+  <style>
+    :root {
+      --vp-c-brand: #3b82f6;
+      --vp-c-brand-hover: #2563eb;
+      --vp-c-brand-light: #93c5fd;
+      --vp-c-text-1: #213547;
+      --vp-c-text-2: #476582;
+      --vp-c-divider: #e2e8f0;
+      --vp-c-bg: #ffffff;
+      --vp-c-bg-mute: #f1f5f9;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--vp-c-text-1); background: var(--vp-c-bg); line-height: 1.6; }
+    .app { display: flex; flex-direction: column; min-height: 100vh; }
+    .hero {
+      padding: 96px 24px 64px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--vp-c-bg-mute) 0%, var(--vp-c-bg) 100%);
+      border-bottom: 1px solid var(--vp-c-divider);
+    }
+    .hero-name { font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, var(--vp-c-brand), var(--vp-c-brand-hover)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-text { font-size: 2.5rem; font-weight: 700; margin: 12px 0 8px; }
+    .hero-tagline { font-size: 1.25rem; color: var(--vp-c-text-2); margin-bottom: 24px; }
+    .hero-image { max-width: 120px; margin: 0 auto 24px; }
+    .hero-image img { width: 100%; height: auto; }
+    .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .hero-actions a { display: inline-block; padding: 12px 24px; font-size: 1rem; font-weight: 500; text-decoration: none; border-radius: 8px; transition: all 0.2s; }
+    .hero-actions .theme-brand { background: var(--vp-c-brand); color: white; }
+    .hero-actions .theme-brand:hover { background: var(--vp-c-brand-hover); }
+    .hero-actions .theme-alt { border: 1px solid var(--vp-c-divider); color: var(--vp-c-text-1); background: var(--vp-c-bg); }
+    .hero-actions .theme-alt:hover { border-color: var(--vp-c-brand); color: var(--vp-c-brand); }
+    .features { padding: 48px 24px; max-width: 1152px; margin: 0 auto; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .feature-card {
+      padding: 24px;
+      background: var(--vp-c-bg);
+      border: 1px solid var(--vp-c-divider);
+      border-radius: 12px;
+      transition: border-color 0.2s;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    .feature-card:hover { border-color: var(--vp-c-brand-light); }
+    .feature-card h3 { font-size: 1.125rem; margin: 0 0 8px; }
+    .feature-card p { margin: 0; color: var(--vp-c-text-2); font-size: 0.9375rem; }
+    .footer { padding: 24px; text-align: center; color: #8b9eb7; font-size: 0.875rem; border-top: 1px solid var(--vp-c-divider); margin-top: auto; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div class="hero-name">客服员工手册</div>
+      <h1 class="hero-text">Customer Service SOP Handbook</h1>
+      <p class="hero-tagline">后台操作 · 入金出金 · 交易口径 · 挽留营销 · IT 反馈 · 营销与活动 Bonus · 可检索可替换</p>
+      <div class="hero-image">
+        <img src="logo.png" alt="Logo" onerror="this.src='logo.svg';this.onerror=null">
+      </div>
+      <div class="hero-actions">
+        <a href="plan.html" class="theme-brand">进入手册</a>
+        <a href="plan.html#01" class="theme-alt">01 后台操作</a>
+      </div>
+    </header>
+
+    <section class="features">
+      <div class="features-grid">
+        <a href="plan.html#01" class="feature-card">
+          <h3>01 · 后台操作流程</h3>
+          <p>账户创建、MT5 模拟账户、邮箱变更、密码重置、杠杆修改、故障排查等流程标准化。</p>
+        </a>
+        <a href="plan.html#02" class="feature-card">
+          <h3>02 · 入金与出金</h3>
+          <p>USDT流程、Peska 流程、Help2Pay流程、支付失败转化策略、未到账对账标准。</p>
+        </a>
+        <a href="plan.html#03" class="feature-card">
+          <h3>03 · 交易环境</h3>
+          <p>紧急波动时的统一口径与模板化回复。</p>
+        </a>
+        <a href="plan.html#04" class="feature-card">
+          <h3>04 · 挽留与营销</h3>
+          <p>账户分级对比（经典 vs 铂金）、销户挽留话术、延迟致歉信模板。</p>
+        </a>
+        <a href="plan.html#05" class="feature-card">
+          <h3>05 · IT 反馈与维护</h3>
+          <p>建议收集表单模板、系统维护期间的替代方案。</p>
+        </a>
+        <a href="plan.html#06" class="feature-card">
+          <h3>06 · 营销与活动 Bonus</h3>
+          <p>营销活动、入金/交易 Bonus、活动规则说明及客服口径。</p>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      客服员工手册 · Customer Service SOP · 内容可随时替换
+    </footer>
+  </div>
+</body>
+</html>

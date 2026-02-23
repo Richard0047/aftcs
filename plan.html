@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>客服员工手册 - Customer Service SOP</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root {
+      --vp-c-brand: #3b82f6;
+      --vp-c-brand-hover: #2563eb;
+      --vp-c-text-1: #213547;
+      --vp-c-text-2: #476582;
+      --vp-c-text-3: #8b9eb7;
+      --vp-c-bg: #ffffff;
+      --vp-c-bg-soft: #f8fafc;
+      --vp-c-bg-mute: #f1f5f9;
+      --vp-c-divider: #e2e8f0;
+      --vp-custom-block-tip-bg: rgba(59, 130, 246, 0.1);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--vp-c-text-1); background: var(--vp-c-bg); line-height: 1.6; }
+    .app { display: flex; flex-direction: column; min-height: 100vh; }
+    .top-bar { padding: 16px 24px; border-bottom: 1px solid var(--vp-c-divider); display: flex; align-items: center; gap: 16px; }
+    .top-bar a { color: var(--vp-c-brand); text-decoration: none; font-size: 0.875rem; }
+    .top-bar a:hover { text-decoration: underline; }
+    .main-wrapper { display: flex; flex: 1; max-width: 1440px; margin: 0 auto; width: 100%; }
+    .sidebar { width: 272px; flex-shrink: 0; padding: 32px 0 96px 32px; border-right: 1px solid var(--vp-c-divider); }
+    .sidebar-nav { position: sticky; top: 24px; }
+    .sidebar-nav h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--vp-c-text-3); margin: 0 0 12px; padding: 0 12px; }
+    .sidebar-nav ul { list-style: none; padding: 0; margin: 0; }
+    .sidebar-nav a { display: block; padding: 6px 12px; color: var(--vp-c-text-2); text-decoration: none; font-size: 0.875rem; border-radius: 6px; }
+    .sidebar-nav a:hover, .sidebar-nav a.active { color: var(--vp-c-brand); }
+    .sidebar-nav a.sub { padding-left: 16px; font-size: 0.8125rem; color: var(--vp-c-text-2); }
+    .sidebar-nav .nav-section { list-style: none; margin: 0; padding: 0; }
+    .sidebar-nav .nav-section-head { display: flex; align-items: center; justify-content: space-between; padding: 0 12px; }
+    .sidebar-nav .nav-section-head .nav-link { flex: 1; margin: 0; }
+    .sidebar-nav .nav-section-toggle { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; padding: 0; font: inherit; color: var(--vp-c-text-3); background: none; border: none; border-radius: 4px; cursor: pointer; }
+    .sidebar-nav .nav-section-toggle:hover { color: var(--vp-c-brand); background: var(--vp-c-bg-mute); }
+    .sidebar-nav .nav-section-icon { display: block; font-size: 0.6rem; transition: transform 0.2s; }
+    .sidebar-nav .nav-section.collapsed .nav-section-icon { transform: rotate(-90deg); }
+    .sidebar-nav .nav-section-list { list-style: none; margin: 0; padding: 0; overflow: hidden; transition: max-height 0.25s ease-out; max-height: 600px; }
+    .sidebar-nav .nav-section.collapsed .nav-section-list { max-height: 0 !important; overflow: hidden; }
+    .content { flex: 1; padding: 32px 48px 96px; min-width: 0; }
+    .markdown-body { max-width: 48rem; }
+    .markdown-body h1 { font-size: 2rem; margin: 0 0 16px; padding-bottom: 0.3em; border-bottom: 1px solid var(--vp-c-divider); }
+    .markdown-body h2 { font-size: 1.5rem; margin: 32px 0 16px; padding-bottom: 0.3em; border-bottom: 1px solid var(--vp-c-divider); }
+    .markdown-body h3 { font-size: 1.25rem; margin: 24px 0 12px; }
+    .markdown-body p { margin: 0 0 16px; }
+    .markdown-body ul, .markdown-body ol { margin: 0 0 16px; padding-left: 2em; }
+    .markdown-body blockquote { margin: 16px 0; padding: 0 1em; color: var(--vp-c-text-2); border-left: 4px solid var(--vp-c-brand); background: var(--vp-custom-block-tip-bg); }
+    .markdown-body table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.875rem; }
+    .markdown-body th, .markdown-body td { border: 1px solid var(--vp-c-divider); padding: 8px 12px; text-align: left; }
+    .markdown-body th { background: var(--vp-c-bg-mute); font-weight: 600; }
+    .markdown-body tr:hover { background: var(--vp-c-bg-soft); }
+    .markdown-body code { padding: 0.2em 0.4em; font-size: 0.875em; background: var(--vp-c-bg-mute); border-radius: 4px; }
+    .markdown-body pre { overflow-x: auto; padding: 16px; background: var(--vp-c-bg-mute); border-radius: 8px; margin: 16px 0; }
+    .markdown-body pre code { padding: 0; background: none; }
+    .markdown-body hr { border: none; border-top: 1px solid var(--vp-c-divider); margin: 24px 0; }
+    .markdown-body a { color: var(--vp-c-brand); }
+    .markdown-body img { max-width: 100%; height: auto; }
+    .footer { padding: 24px; text-align: center; color: var(--vp-c-text-3); font-size: 0.875rem; border-top: 1px solid var(--vp-c-divider); }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="top-bar">
+      <a href="index.html">← 返回首页</a>
+    </div>
+    <div class="main-wrapper">
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <h2>文档目录</h2>
+          <ul>
+            <li><a href="plan.html" class="nav-link" data-load="Home.md">00 首页</a></li>
+            <li class="nav-section" id="nav-section-01" data-section="01">
+              <span class="nav-section-head">
+                <a href="plan.html#01" class="nav-link" data-load="01_Back_Office_Procedures/README.md">01 后台操作流程</a>
+                <button type="button" class="nav-section-toggle" aria-expanded="true" aria-label="展开或收起子目录" title="展开/收起"><span class="nav-section-icon">▼</span></button>
+              </span>
+              <ul class="nav-section-list">
+                <li><a href="plan.html#01-1" class="nav-link sub" data-load="01_Back_Office_Procedures/01_Account_Creation.md">　├ 1. KYC 账户创建</a></li>
+                <li><a href="plan.html#01-2" class="nav-link sub" data-load="01_Back_Office_Procedures/02_MT5_Live_Account.md">　├ 2. MT5 Live 账户</a></li>
+                <li><a href="plan.html#01-3" class="nav-link sub" data-load="01_Back_Office_Procedures/03_Email_Change.md">　├ 3. 邮箱变更</a></li>
+                <li><a href="plan.html#01-4" class="nav-link sub" data-load="01_Back_Office_Procedures/04_Password_Reset.md">　├ 4. 重置密码</a></li>
+                <li><a href="plan.html#01-5" class="nav-link sub" data-load="01_Back_Office_Procedures/05_Leverage_Change.md">　├ 5. 杠杆修改</a></li>
+                <li><a href="plan.html#01-6" class="nav-link sub" data-load="01_Back_Office_Procedures/06_Troubleshooting.md">　├ 6. 故障排查</a></li>
+                <li><a href="plan.html#01-7" class="nav-link sub" data-load="01_Back_Office_Procedures/07_Demo_Account.md">　├ 7. MT5 模拟账户</a></li>
+                <li><a href="plan.html#01-8" class="nav-link sub" data-load="01_Back_Office_Procedures/08_Zendesk_Docs.md">　└ 8. Zendesk 文档</a></li>
+              </ul>
+            </li>
+            <li class="nav-section" id="nav-section-02" data-section="02">
+              <span class="nav-section-head">
+                <a href="plan.html#02" class="nav-link" data-load="02_Payment_and_Funding/README.md">02 入金与出金</a>
+                <button type="button" class="nav-section-toggle" aria-expanded="true" aria-label="展开或收起子目录" title="展开/收起"><span class="nav-section-icon">▼</span></button>
+              </span>
+              <ul class="nav-section-list">
+                <li><a href="plan.html#02-1" class="nav-link sub" data-load="02_Payment_and_Funding/01_USDT_Deposit.md">　├ 1. USDT 入金</a></li>
+                <li><a href="plan.html#02-2" class="nav-link sub" data-load="02_Payment_and_Funding/02_Peska.md">　├ 2. Peska</a></li>
+                <li><a href="plan.html#02-3" class="nav-link sub" data-load="02_Payment_and_Funding/03_Payment_Failure_Conversion.md">　├ 3. 支付失败转化</a></li>
+                <li><a href="plan.html#02-4" class="nav-link sub" data-load="02_Payment_and_Funding/04_Reconciliation.md">　├ 4. 未到账对账</a></li>
+                <li><a href="plan.html#02-5" class="nav-link sub" data-load="02_Payment_and_Funding/05_Withdrawal.md">　├ 5. 出金标准场景</a></li>
+                <li><a href="plan.html#02-6" class="nav-link sub" data-load="02_Payment_and_Funding/06_Zendesk_Docs.md">　└ 6. Zendesk 文档</a></li>
+              </ul>
+            </li>
+            <li class="nav-section" id="nav-section-03" data-section="03">
+              <span class="nav-section-head">
+                <a href="plan.html#03" class="nav-link" data-load="03_Trading_Environment/README.md">03 交易环境</a>
+                <button type="button" class="nav-section-toggle" aria-expanded="true" aria-label="展开或收起子目录" title="展开/收起"><span class="nav-section-icon">▼</span></button>
+              </span>
+              <ul class="nav-section-list">
+                <li><a href="plan.html#03-1" class="nav-link sub" data-load="03_Trading_Environment/01_Volatility.md">　├ 1. 行情剧烈波动</a></li>
+                <li><a href="plan.html#03-2" class="nav-link sub" data-load="03_Trading_Environment/02_Platform_Latency.md">　├ 2. 平台延迟或卡顿</a></li>
+                <li><a href="plan.html#03-3" class="nav-link sub" data-load="03_Trading_Environment/03_Liquidation_Dispute.md">　├ 3. 强平争议</a></li>
+                <li><a href="plan.html#03-4" class="nav-link sub" data-load="03_Trading_Environment/04_Maintenance.md">　├ 4. 临时维护</a></li>
+                <li><a href="plan.html#03-5" class="nav-link sub" data-load="03_Trading_Environment/05_Server_Failure.md">　├ 5. 交易服务器故障</a></li>
+                <li><a href="plan.html#03-6" class="nav-link sub" data-load="03_Trading_Environment/06_Spread_and_Slippage.md">　├ 6. 点差扩大与滑点</a></li>
+                <li><a href="plan.html#03-7" class="nav-link sub" data-load="03_Trading_Environment/07_Zendesk_Docs.md">　└ 7. Zendesk 文档</a></li>
+              </ul>
+            </li>
+            <li class="nav-section" id="nav-section-04" data-section="04">
+              <span class="nav-section-head">
+                <a href="plan.html#04" class="nav-link" data-load="04_Retention_and_Marketing/README.md">04 挽留与营销</a>
+                <button type="button" class="nav-section-toggle" aria-expanded="true" aria-label="展开或收起子目录" title="展开/收起"><span class="nav-section-icon">▼</span></button>
+              </span>
+              <ul class="nav-section-list">
+                <li><a href="plan.html#04-1" class="nav-link sub" data-load="04_Retention_and_Marketing/01_Account_Tier_Comparison.md">　├ 1. 账户分级对比</a></li>
+                <li><a href="plan.html#04-2" class="nav-link sub" data-load="04_Retention_and_Marketing/02_Account_Closure_Retention.md">　├ 2. 销户挽留话术</a></li>
+                <li><a href="plan.html#04-3" class="nav-link sub" data-load="04_Retention_and_Marketing/03_Official_Apology.md">　└ 3. 官方致歉信模板</a></li>
+              </ul>
+            </li>
+            <li><a href="plan.html#05" class="nav-link" data-load="05_IT_Feedback_Loop.md">05 IT 反馈与维护</a></li>
+            <li><a href="plan.html#06" class="nav-link" data-load="06_Marketing_and_Bonus.md">06 营销与活动 Bonus</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="content">
+        <article id="content" class="markdown-body"></article>
+      </main>
+    </div>
+    <footer class="footer">
+      <div>客服员工手册 · Customer Service SOP · 内容可随时替换</div>
+    </footer>
+  </div>
+
+  <script>
+    marked.setOptions({ gfm: true, breaks: true, headerIds: true });
+
+    const contentEl = document.querySelector('.markdown-body');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const hashToFile = {
+      '01': '01_Back_Office_Procedures/README.md',
+      '01-1': '01_Back_Office_Procedures/01_Account_Creation.md',
+      '01-2': '01_Back_Office_Procedures/02_MT5_Live_Account.md',
+      '01-3': '01_Back_Office_Procedures/03_Email_Change.md',
+      '01-4': '01_Back_Office_Procedures/04_Password_Reset.md',
+      '01-5': '01_Back_Office_Procedures/05_Leverage_Change.md',
+      '01-6': '01_Back_Office_Procedures/06_Troubleshooting.md',
+      '01-7': '01_Back_Office_Procedures/07_Demo_Account.md',
+      '01-8': '01_Back_Office_Procedures/08_Zendesk_Docs.md',
+      '02': '02_Payment_and_Funding/README.md',
+      '02-1': '02_Payment_and_Funding/01_USDT_Deposit.md',
+      '02-2': '02_Payment_and_Funding/02_Peska.md',
+      '02-3': '02_Payment_and_Funding/03_Payment_Failure_Conversion.md',
+      '02-4': '02_Payment_and_Funding/04_Reconciliation.md',
+      '02-5': '02_Payment_and_Funding/05_Withdrawal.md',
+      '02-6': '02_Payment_and_Funding/06_Zendesk_Docs.md',
+      '03': '03_Trading_Environment/README.md',
+      '03-1': '03_Trading_Environment/01_Volatility.md',
+      '03-2': '03_Trading_Environment/02_Platform_Latency.md',
+      '03-3': '03_Trading_Environment/03_Liquidation_Dispute.md',
+      '03-4': '03_Trading_Environment/04_Maintenance.md',
+      '03-5': '03_Trading_Environment/05_Server_Failure.md',
+      '03-6': '03_Trading_Environment/06_Spread_and_Slippage.md',
+      '03-7': '03_Trading_Environment/07_Zendesk_Docs.md',
+      '04': '04_Retention_and_Marketing/README.md',
+      '04-1': '04_Retention_and_Marketing/01_Account_Tier_Comparison.md',
+      '04-2': '04_Retention_and_Marketing/02_Account_Closure_Retention.md',
+      '04-3': '04_Retention_and_Marketing/03_Official_Apology.md',
+      '05': '05_IT_Feedback_Loop.md',
+      '06': '06_Marketing_and_Bonus.md'
+    };
+
+    function setActiveNav(file) {
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.dataset.load === file);
+      });
+    }
+
+    const fallback = {
+      'Home.md': `# 客服员工手册 (Customer Service SOP Handbook)\n\n> 本手册为**跨国金融机构客服 SOP**，将零散业务逻辑转化为逻辑严密、易于检索的标准作业程序。\n\n## 快速入口\n\n| 章节 | 内容 |\n|------|------|\n| **01** | 后台操作流程 (Back-Office) |\n| **02** | 入金与出金 (Payment and Funding) |\n| **03** | 交易环境与紧急波动 (Trading Environment) |\n| **04** | 挽留与营销 (Retention and Marketing) |\n| **05** | IT 反馈与维护 (IT Feedback Loop) |\n| **06** | 营销与活动 Bonus (Marketing & Activity Bonus) |\n\n请使用 npx serve 或 python -m http.server 通过 http 访问以加载完整 .md 文件。`,
+      '01_Back_Office_Procedures/README.md': `# 01 后台操作流程 (Back-Office Procedures)\n\n> 账户创建、模拟账户、邮箱变更、密码重置、杠杆修改及故障排查。\n\n请点击左侧子目录查看各主题，或使用本地服务器加载完整 .md 文件。`,
+      '01_Back_Office_Procedures/01_Account_Creation.md': `# 1. 账户创建\n\n> KYC 前置校验、KYC 审核未通过/创建失败/KYC 已解决等场景。\n\n完整内容请通过本地服务器加载。`,
+      '01_Back_Office_Procedures/02_MT5_Live_Account.md': `# 2. 如何创建 MT5 Live 账户\n\n> 在 Portal 自助创建 MT5 实盘账户。\n\n完整内容请通过本地服务器加载。`,
+      '01_Back_Office_Procedures/03_Email_Change.md': `# 3. 邮箱变更\n\n> 双邮箱确认、冷却期。\n\n完整内容请通过本地服务器加载。`,
+      '01_Back_Office_Procedures/04_Password_Reset.md': `# 4. 重置密码\n\n> 安全原则、MT5 密码重置（邮箱变更后）。\n\n完整内容请通过本地服务器加载。`,
+      '01_Back_Office_Procedures/05_Leverage_Change.md': `# 5. 杠杆修改\n\n> 无持仓硬性条件、确认前提与修改完成告知。\n\n完整内容请通过本地服务器加载。`,
+      '01_Back_Office_Procedures/06_Troubleshooting.md': `# 6. 故障排查\n\n> 确认 → 复现与隔离 → 升级。\n\n完整内容请通过本地服务器加载。`,
+      '01_Back_Office_Procedures/07_Demo_Account.md': `# 7. MT5 模拟账户\n\n> MT5 内自助创建模拟账户引导。\n\n完整内容请通过本地服务器加载。`,
+      '01_Back_Office_Procedures/08_Zendesk_Docs.md': `# 8. Zendesk 文档中心\n\n> 官网帮助中心链接汇总。\n\n完整内容请通过本地服务器加载。`,
+      '02_Payment_and_Funding/README.md': `# 02 入金与出金 (Payment and Funding)\n\n> USDT/Peska 流程、支付失败转化、未到账对账标准。\n\n请点击左侧子目录查看各主题，或使用本地服务器加载完整 .md 文件。`,
+      '02_Payment_and_Funding/01_USDT_Deposit.md': `# 1. USDT 入金\n\n> （内容待补充）`,
+      '02_Payment_and_Funding/02_Peska.md': `# 2. Peska 流程\n\n> （内容待补充）`,
+      '02_Payment_and_Funding/03_Payment_Failure_Conversion.md': `# 3. 支付失败转化\n\n> （内容待补充）`,
+      '02_Payment_and_Funding/04_Reconciliation.md': `# 4. 未到账对账\n\n> （内容待补充）`,
+      '02_Payment_and_Funding/05_Withdrawal.md': `# 5. 出金标准场景\n\n> 出金申请受理、被拒（持仓/原路返回）、已汇出未到账。\n\n完整内容请通过本地服务器加载。`,
+      '02_Payment_and_Funding/06_Zendesk_Docs.md': `# 6. Zendesk 文档（入金与出金相关）\n\n> （内容待补充）`,
+      '03_Trading_Environment/README.md': `# 03 交易环境与紧急波动 (Trading Environment)\n\n> 行情异常、平台延迟、强平争议、临时维护及交易服务器故障的统一口径。\n\n请点击左侧子目录查看各主题，或使用本地服务器加载完整 .md 文件。`,
+      '03_Trading_Environment/01_Volatility.md': `# 1. 行情剧烈波动\n\n> 原因说明与风险提示模板。\n\n完整内容请通过本地服务器加载。`,
+      '03_Trading_Environment/02_Platform_Latency.md': `# 2. 平台延迟或卡顿\n\n> 确认与安抚、升级说明。\n\n完整内容请通过本地服务器加载。`,
+      '03_Trading_Environment/03_Liquidation_Dispute.md': `# 3. 强平争议\n\n> 按规则复核、转风控书面回复。\n\n完整内容请通过本地服务器加载。`,
+      '03_Trading_Environment/04_Maintenance.md': `# 4. 临时维护\n\n> 事前公告与事中口径。\n\n完整内容请通过本地服务器加载。`,
+      '03_Trading_Environment/05_Server_Failure.md': `# 5. 交易服务器故障\n\n> 统一口径、安抚与升级路径。\n\n完整内容请通过本地服务器加载。`,
+      '03_Trading_Environment/06_Spread_and_Slippage.md': `# 6. 点差扩大与滑点\n\n> 点差扩大、滑点、婉拒赔偿口径。\n\n完整内容请通过本地服务器加载。`,
+      '03_Trading_Environment/07_Zendesk_Docs.md': `# 7. Zendesk 文档（交易环境与疑难解答）\n\n> 疑难解答分类 zh-sg / en-au / ja-jp / zh-cn 链接。\n\n完整内容请通过本地服务器加载。`,
+      '04_Retention_and_Marketing/README.md': `# 04 挽留与营销 (Retention and Marketing)\n\n> 账户分级对比、销户挽留话术、官方致歉信模板。\n\n请点击左侧子目录查看各主题，或使用本地服务器加载完整 .md 文件。`,
+      '04_Retention_and_Marketing/01_Account_Tier_Comparison.md': `# 1. 账户分级对比\n\n> 经典 vs 铂金、Platinum 要点与话术、复制即用（中英日）。\n\n完整内容请通过本地服务器加载。`,
+      '04_Retention_and_Marketing/02_Account_Closure_Retention.md': `# 2. 销户挽留话术\n\n> 挽留流程、按原因分类话术、统一收尾。\n\n完整内容请通过本地服务器加载。`,
+      '04_Retention_and_Marketing/03_Official_Apology.md': `# 3. 官方致歉信模板\n\n> 延迟/事件致歉信框架，发布前须合规/公关审批。\n\n完整内容请通过本地服务器加载。`,
+      '05_IT_Feedback_Loop.md': `# 05 IT 反馈与维护 (IT Feedback Loop)\n\n> 建议收集表单、系统维护期间替代方案。\n\n- **建议收集表单**：类别、模块、描述、复现步骤、客户反馈摘要等字段与示例\n- **维护期间替代**：无法登录/出金/报表时的口径与替代路径；不承诺具体恢复时间\n\n完整内容请通过本地服务器加载本 .md 文件查看。`,
+      '06_Marketing_and_Bonus.md': `# 06 营销与活动 Bonus (Marketing & Activity Bonus)\n\n> 营销活动、入金/交易 Bonus、活动规则说明及客服口径。\n\n- **活动规则**：以官网/活动页公示为准\n- **Bonus 发放**：满足条件后按规则处理\n- **话术建议**：活动咨询、未到账、不符合条件\n\n完整内容请通过本地服务器加载本 .md 文件查看。`
+    };
+
+    function render(md) {
+      contentEl.innerHTML = marked.parse(md);
+      contentEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function loadMarkdown(file) {
+      fetch(file)
+        .then(r => { if (!r.ok) throw new Error(); return r.text(); })
+        .then(md => { render(md); setActiveNav(file); })
+        .catch(() => {
+          if (fallback[file]) { render(fallback[file]); } else {
+            contentEl.innerHTML = '<p style="color:#ef4444;">加载失败。双击打开时请使用 <code>npx serve</code> 或 <code>python -m http.server</code> 后通过 http://localhost 访问。</p>';
+          }
+          setActiveNav(file);
+        });
+    }
+
+    function init() {
+      const hash = (location.hash || '').replace('#', '');
+      const file = hashToFile[hash] || 'Home.md';
+      loadMarkdown(file);
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        loadMarkdown(this.dataset.load);
+      });
+    });
+
+    window.addEventListener('hashchange', init);
+    init();
+
+    (function() {
+      var KEY_PREFIX = 'sop-nav-section-';
+      document.querySelectorAll('.nav-section').forEach(function(section) {
+        var id = section.getAttribute('data-section');
+        var toggle = section.querySelector('.nav-section-toggle');
+        var list = section.querySelector('.nav-section-list');
+        if (!id || !toggle || !list) return;
+        function setCollapsed(collapsed) {
+          section.classList.toggle('collapsed', collapsed);
+          toggle.setAttribute('aria-expanded', !collapsed);
+          try { localStorage.setItem(KEY_PREFIX + id, collapsed ? '1' : '0'); } catch (e) {}
+        }
+        try {
+          if (localStorage.getItem(KEY_PREFIX + id) === '1') setCollapsed(true);
+        } catch (e) {}
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          setCollapsed(section.classList.contains('collapsed') ? false : true);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
