@@ -31,7 +31,112 @@
 
 ---
 
-## 4.3 场景：邮箱变更与 MT5 密码重置（需先完成邮箱变更）
+## 4.3 MT5 交易账户密码重置详细步骤
+
+适用于客户在**会员后台（Client Portal）**自助重置 MT5 主密码或只读密码。分两种入口：**「忘记密码」**（系统发邮件通知新密码）与**「修改密码」**（已知当前密码时直接修改）。
+
+### 操作步骤（详细）
+
+| 步骤 | 动作 | 备注 |
+|------|------|------|
+| 1 | 登录**会员页面（Client Portal）** | https://portal.asiafuturetrading.com/ |
+| 2 | 在菜单中点击 **「口座」(Accounts)** | 进入账户列表 |
+| 3 | 选择需要重置密码的 **MT5 交易账户** | 点击该账户行 |
+| 4 | 点击 **「操作」(Action)** 或设置图标，选择 **「パスワードを忘れた場合」/「忘记密码」** 或 **「修改密码」(Change Password)** | 忘记密码：提交后系统发邮件通知新密码；修改密码：需输入新密码并保存 |
+| 5 | （若为忘记密码）选择要重置的密码类型 | **主密码 (Master/マスターパスワード)** 或 **只读密码 (Investor/閲覧専用パスワード)** |
+| 6 | 提交重置请求 | 若为「忘记密码」，提交后等待邮件；若为「修改密码」，直接保存即可 |
+
+**※ 注意：** 重置完成后，系统会向**注册邮箱**发送通知。若未收到，请客户检查垃圾邮件文件夹。收到邮件后，请使用新密码登录 MT5。
+
+---
+
+### 📋 复制即用 · 中文（MT5 密码重置引导）
+
+```
+〇〇 先生/女士：
+
+感谢您提供账户编号（520101）的信息。
+
+以下为交易账户（MT5）密码重置步骤，请按下列流程操作。
+
+【交易账户密码重置步骤】
+
+1. 登录会员页面（客户门户）：https://portal.asiafuturetrading.com/
+2. 在菜单中点击「账户」(Accounts)。
+3. 选择需要重置密码的 MT5 交易账户。
+4. 点击「操作」(Action) 或设置图标，选择「忘记密码」。
+5. 选择要重置的密码类型（主密码 / 只读密码）。
+6. 提交重置请求。
+
+※ 注意：重置完成后，系统会向您注册的邮箱发送通知。若未收到邮件，请检查垃圾邮件文件夹。收到邮件后，请使用新密码登录。
+
+如有任何疑问，请随时与我们联系。
+谢谢。
+```
+
+### 📋 复制即用 · 日文（MT5 密码重置引导）
+
+```
+XX 様
+
+口座番号（520101）のご連絡ありがとうございます。
+取引口座（MT5）のパスワード再設定手順をご案内いたします。
+
+お手数ですが、以下の手順に沿ってお手続きをお願い申し上げます。
+
+【取引口座パスワードの再設定手順】
+
+**会員ページ（クライアントポータル）**にログインします。
+（https://portal.asiafuturetrading.com/）
+
+メニューから**「口座（Accounts）」**をクリックします。
+
+パスワードを再設定したい対象のMT5口座を選択します。
+
+**「操作（Action）」または設定アイコンをクリックし、「パスワードを忘れた場合」**を選択します。
+
+再設定するパスワードの種類（マスターパスワード / 閲覧専用パスワード）を選択します。
+
+リセットのリクエストを送信します。
+
+※ご注意：
+変更が完了すると、ご登録のメールアドレスに通知が届きます。メールが届かない場合は、迷惑メールフォルダもご確認ください。メールを確認後、新しいパスワードでログインをお試しください。
+
+ご不明な点がございましたら、お気軽にお問い合わせください。
+よろしくお願い申し上げます。
+```
+
+*口座番号（520101）与 XX 様 请按实际客户信息替换。*
+
+### 📋 复制即用 · 英文 (English)（MT5 密码重置引导）
+
+```
+Dear Mr./Ms. 〇〇,
+
+Thank you for providing your account number (520101).
+
+Please find below the steps to reset your trading account (MT5) password. We ask that you follow the procedure below.
+
+【Trading Account Password Reset Steps】
+
+1. Log in to the **Client Portal**: https://portal.asiafuturetrading.com/
+2. Click **"Accounts"** in the menu.
+3. Select the MT5 trading account for which you wish to reset the password.
+4. Click **"Action"** or the settings icon, then select **"Forgot Password."**
+5. Select the type of password to reset (Master Password / Investor [Read-Only] Password).
+6. Submit the reset request.
+
+※ Please note: Once the change is complete, a notification will be sent to your registered email address. If you do not receive the email, please check your spam or junk folder. After confirming the email, please try logging in with your new password.
+
+If you have any questions, please do not hesitate to contact us.
+Thank you for your cooperation.
+```
+
+*Replace account number (520101) and salutation with the actual client details.*
+
+---
+
+## 4.4 场景：邮箱变更与 MT5 密码重置（需先完成邮箱变更）
 
 客户同时申请邮箱变更与 MT5 主密码重置时，因安全考虑**无法直接查询或重发原始密码**。需引导客户在**邮箱变更完成后**，登录会员后台自助修改 MT5 密码。
 
