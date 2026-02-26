@@ -1,4 +1,4 @@
-# 8. Zendesk 文档中心快速索引 (Zendesk Help Center / Zendeskヘルプセンター)
+# 9. Zendesk 文档中心快速索引 (Zendesk Help Center / Zendeskヘルプセンター)
 
 > 官网 Zendesk 文档中心链接汇总，便于客服快速定位并转发给客户。按 7. Zendesk 文档 (交易环境与疑难解答相关) 的表格形式整理，含中文标题与多语言链接列。
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 8.1 Beginner's Guide 初学者指南
+## 9.1 Beginner's Guide 初学者指南
 
 | 文章标题 (中文) | 文章标题 (English) | 中文 (zh-cn) | 英文 (en-au) |
 |-----------------|--------------------|--------------|--------------|
@@ -31,7 +31,7 @@
 
 ---
 
-## 8.2 My Account 我的账户
+## 9.2 My Account 我的账户
 
 ### Account Settings 账户设置
 
